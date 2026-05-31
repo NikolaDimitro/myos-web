@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My OS</title>
+</head>
+<body>
+    <div id="screen_container"></div>
+
+    <script src="https://copy.sh/v86/build/v86.js"></script>
+
+    <script>
+    new V86({
+        wasm_path: "https://copy.sh/v86/build/v86.wasm",
+        screen_container: document.getElementById("screen_container"),
+
+        cdrom: {
+            url: "myos.iso"
+        },
+
+        memory_size: 128 * 1024 * 1024,
+        vga_memory_size: 8 * 1024 * 1024,
+
+        autostart: true
+    });
+    </script>
+</body>
+</html>
